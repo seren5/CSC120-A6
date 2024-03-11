@@ -9,7 +9,7 @@ public class House extends Building{
 
   public House(Building name) {
     super(name);
-    residents = new residents("");
+    residents = new ArrayList<String>(residents);
     System.out.println("You have built a house: 🏠");
   }
 
