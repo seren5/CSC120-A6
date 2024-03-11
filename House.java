@@ -13,17 +13,29 @@ public class House extends Building{
     System.out.println("You have built a house: 🏠");
   }
 
-  public boolean hasDiningRoom();
+  public boolean hasDiningRoom() {
+    // what goes here
+  }
   
   public int nResidents();
 
   public void moveIn(String name) {
-    residents.add(name);
+    if (!residents.contains(name)){
+      residents.add(name);
+    }
+    else {
+      // throw and catch exception
+    }
   }
 
   public String moveOut(String name) {
-    residents.remove(name);
-    return name + "has moved out.";
+    if (residents.contains(name)){
+      residents.remove(name);
+      return name + "has moved out.";
+    }
+    else {
+      // throw and catch exception
+    }
   }
 
   public boolean isResident(String person){
