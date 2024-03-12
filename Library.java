@@ -25,7 +25,12 @@ public class Library extends Building {
     }
 
     public void checkOut(String title) {
-      this.collection.replace(title, true, false);
+      if (collection.contains(title)){
+        this.collection.replace(title, true, false);
+      }
+      else {
+        System.out.println("We do not have this book, or it has been checked out.");
+      }
     }
 
     public void returnBook(String title) {
