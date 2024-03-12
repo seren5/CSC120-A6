@@ -37,6 +37,21 @@ public class Library extends Building {
       this.collection.replace(title, false, true);
     }
 
+    public boolean containsTitle(String title){
+      return collection.containsKey(title);
+    } // returns true if the title appears as a key in the Libary's collection, false otherwise
+
+
+    public boolean isAvailable(String title) {
+      //????
+    } // returns true if the title is currently available, false otherwise
+
+
+    public void printCollection() {
+
+    } // prints out the entire collection in an easy-to-read way (including checkout status)
+
+
 
     public static void main(String[] args) {
       Library myLibrary = new Library("Local Library", "124 Drury Lane", 2);
