@@ -22,9 +22,12 @@ public class Cafe extends Building{
             this.nSugarPackets -= nSugarPackets;
             this.nCreams -= nCreams;
             this.nCups -= 1;
+            System.out.println("Here is your coffee with " + size + " sugar packets, and " + nCreams + "creams! Enjoy!");
         }
         else {
+            System.out.println("We do not have enough inventory, please wait as we restock!");
             restock(100, 100, 100, 100);
+            System.out.println("Restock complete!");
         }
     }
 
