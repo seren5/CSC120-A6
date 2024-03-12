@@ -25,11 +25,14 @@ public class Library extends Building {
     }
 
     public void checkOut(String title) {
-      if (collection.contains(title)){
+      if (isAvailable(title)){
         this.collection.replace(title, true, false);
       }
+      else if (!isAvailable(title)) {
+        System.out.println("This book has been checked out and is unavailable.");
+      }
       else {
-        System.out.println("We do not have this book, or it has been checked out.");
+        System.out.println("We do not have this book, sorry!");
       }
     }
 
@@ -43,12 +46,12 @@ public class Library extends Building {
 
 
     public boolean isAvailable(String title) {
-      //????
+      return collection.get(title);
     } // returns true if the title is currently available, false otherwise
 
 
     public void printCollection() {
-
+      this.collection.toString();
     } // prints out the entire collection in an easy-to-read way (including checkout status)
 
 
