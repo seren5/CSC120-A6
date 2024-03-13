@@ -1,5 +1,5 @@
 import java.util.Hashtable;
-
+/* This is a stub for the Library class */
 /**
  * Extends the Building class
  */
