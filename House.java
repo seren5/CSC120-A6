@@ -2,6 +2,9 @@
 
 import java.util.ArrayList;
 
+/**
+ * Extends the Building Class
+ */
 public class House extends Building{
 
   private ArrayList<String> residents; // The <String> tells Java what kind of data we plan to store IN the ArrayList
