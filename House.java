@@ -78,6 +78,7 @@ public class House extends Building{
     return this.residents.contains(person);
   }
 
+  
   public static void main(String[] args) {
     House myHouse = new House("Emily's House", "123 Drury Lane", 3, true);
   }
