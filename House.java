@@ -19,7 +19,7 @@ public class House extends Building{
    */
   public House(String name, String address, int nFloors, boolean hasDiningRoom) {
     super(name, address, nFloors);
-    this.residents = new ArrayList<String>(residents);
+    residents = new ArrayList<String>();
     System.out.println("You have built a house: 🏠");
     this.hasDiningRoom = hasDiningRoom;
   }
