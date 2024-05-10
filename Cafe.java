@@ -46,6 +46,11 @@ public class Cafe extends Building{
         else {
             System.out.println("We do not have enough inventory, please wait as we restock!");
             restock(100, 100, 100, 100);
+            this.nCoffeeOunces -= size;
+            this.nSugarPackets -= nSugarPackets;
+            this.nCreams -= nCreams;
+            this.nCups -= 1;
+            System.out.println("Here is your coffee with " + size + " sugar packets, and " + nCreams + "creams! Enjoy!");
             System.out.println("Restock complete!");
         }
     }
@@ -58,10 +63,10 @@ public class Cafe extends Building{
      * @param nCups
      */
     private void restock(int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
-        this.nCoffeeOunces = nCoffeeOunces;
-        this.nSugarPackets = nSugarPackets;
-        this.nCreams = nCreams;
-        this.nCups = nCups;
+        this.nCoffeeOunces += nCoffeeOunces;
+        this.nSugarPackets += nSugarPackets;
+        this.nCreams += nCreams;
+        this.nCups += nCups;
     }
     
     public static void main(String[] args) {

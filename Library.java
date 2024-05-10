@@ -15,7 +15,7 @@ public class Library extends Building {
    */
     public Library(String name, String address, int nFloors) {
       super(name, address, nFloors);
-      collection = new Hashtable<String, Boolean>(collection);
+      this.collection = new Hashtable<String, Boolean>(collection);
       System.out.println("You have built a library: 📖");
     }
   
@@ -23,7 +23,7 @@ public class Library extends Building {
      * Updates Hashtable containing collection with the added title
      */
     public void addTitle(String title) {
-      this.collection.put(title, true); // This assumes that there can be multiple of a book
+      this.collection.put(title, true); // This assumes that there only be one be of a book
     }
 
     /**

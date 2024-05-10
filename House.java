@@ -19,7 +19,7 @@ public class House extends Building{
    */
   public House(String name, String address, int nFloors, boolean hasDiningRoom) {
     super(name, address, nFloors);
-    residents = new ArrayList<String>(residents);
+    this.residents = new ArrayList<String>(residents);
     System.out.println("You have built a house: 🏠");
     this.hasDiningRoom = hasDiningRoom;
   }
@@ -39,14 +39,14 @@ public class House extends Building{
   public int nResidents(){
     return this.residents.size();
   }
-
+k
   /**
    * Updates ArrayList of residents with name (if they are not already there)
    * @param name
    */
   public void moveIn(String name) {
     if (!isResident(name)){
-      residents.add(name);
+      this.residents.add(name);
     }
     else if (isResident(name)){
       System.out.println(name + " already lives here!");
@@ -60,7 +60,7 @@ public class House extends Building{
    */
   public String moveOut(String name) {
     if (isResident(name)){
-      residents.remove(name);
+      this.residents.remove(name);
       return name + " has moved out.";
     }
     else {
@@ -75,11 +75,7 @@ public class House extends Building{
    * @return true/false (Depending on if the person lives in the house)
    */
   public boolean isResident(String person){
-    if (residents.contains(person)){
-      return true;
-    } else{
-      return false;
-    }
+    return this.residents.contains(person);
   }
 
   public static void main(String[] args) {
