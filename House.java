@@ -39,7 +39,7 @@ public class House extends Building{
   public int nResidents(){
     return this.residents.size();
   }
-k
+
   /**
    * Updates ArrayList of residents with name (if they are not already there)
    * @param name
